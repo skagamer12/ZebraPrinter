@@ -1,5 +1,6 @@
 package librerias;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,11 +26,11 @@ public class NetworkDiscovererExample {
             }
 
             public void discoveryError(String message) {
-                System.out.println("Ocurrio un error buscando impresoras  : " + message);
+                System.out.println("An error occurred during discovery : " + message);
             }
         };
         try {
-            System.out.println("Comenzando busqueda de impresoras .");
+            System.out.println("Starting printer discovery.");
             NetworkDiscoverer.findPrinters(discoveryHandler);
         } catch (DiscoveryException e) {
             e.printStackTrace();
